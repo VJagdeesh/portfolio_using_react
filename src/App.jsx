@@ -9,6 +9,7 @@ import About from './routes/About'
 import Projects from './routes/Projects'
 import Contact from './routes/Contact'
 import Skills from './routes/Skills'
+import Certifications from './routes/Certifications'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
       <Route path="/project" element={<Projects/>}/>
       <Route path="/contact" element={<Contact/>}/>
       <Route path="/skills" element={<Skills/>}/>
+      <Route path="/certifications" element={<Certifications/>}/>
       </Routes>
   )
 }

@@ -38,6 +38,9 @@ const Navbar = () => {
     <li>
     <Link to="/skills">Skills</Link>    
     </li>
+    <li>
+    <Link to="/certifications">Certifications</Link>    
+    </li>
     </ul>
 
     <div className="hamburger" onClick={handleClick}>

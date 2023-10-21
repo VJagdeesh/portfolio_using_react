@@ -40,22 +40,23 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-const rows = [
-  {serial:"1",name:'React JS'},{serial:"2",name:'Java'},{serial:"3",name:'Python'},{serial:"4",name:'AWS'},{serial:"5",name:'DSA'},
-  {serial:"6",name:'Linux'},{serial:"7",name:'My SQL'},{serial:"8",name:'Cryptography'},{serial:"9",name:'Object Oriented Programming'},{serial:"10",name:'C++'}];
+// const rows = [
+//   {serial:"1",name:'React JS'},{serial:"2",name:'Java'},{serial:"3",name:'Python'},{serial:"4",name:'AWS'},{serial:"5",name:'DSA'},
+//   {serial:"6",name:'Linux'},{serial:"7",name:'My SQL'},{serial:"8",name:'Cryptography'},{serial:"9",name:'Object Oriented Programming'},{serial:"10",name:'C++'}];
 
-export default function Skilllist() {
+export default function Skilllist(props) {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ maxWidth: "100vw" }} aria-label="simple table" >
         <TableHead>
           <TableRow>
-            <TableCell><b>Serial Number</b></TableCell>
-            <TableCell><b>Skills</b></TableCell>
+            {props.headings.map((heading)=>(<TableCell><b>{heading}</b></TableCell>))}
+            {/* <TableCell><b>Serial Number</b></TableCell>
+            <TableCell><b>Skills</b></TableCell> */}
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+          {props.data.map((row) => (
             <TableRow
               key={row.name}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -66,6 +67,9 @@ export default function Skilllist() {
               <TableCell component="th" scope="row">
                 {row.name} 
               </TableCell>
+              {row.certification != undefined && <TableCell component="th" scope="row">
+                <a style={{color:"blue"}} onClick={()=>{window.open(row.certification)}}>Click here</a> 
+              </TableCell>}
             </TableRow>
           ))}
         </TableBody>
