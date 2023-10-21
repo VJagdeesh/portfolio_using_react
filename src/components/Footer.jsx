@@ -1,6 +1,6 @@
 import "./FooterStyles.css"
 import React from 'react'
-import {FaFacebook, FaHome, FaInstagram, FaLinkedin, FaMailBulk, FaPhone, FaTwitter} from "react-icons/fa"
+import {FaFacebook, FaGithubSquare, FaHome, FaInstagram, FaLinkedin, FaMailBulk, FaPhone, FaTwitter} from "react-icons/fa"
 const Footer = () => {
   return (
     <div className="footer">
@@ -38,9 +38,10 @@ a back-end framework. Creating scripts for the day-to-day monitoring of
 resources using Python. Also, using technologies like AWS for the 
 projects</p>
     <div className="social">
-    <FaLinkedin size={30} style={{color:"#fff",marginRight:"1rem"}}/>    
-    <FaFacebook size={30} style={{color:"#fff",marginRight:"1rem"}}/>
-    <FaInstagram size={30} style={{color:"#fff",marginRight:"1rem"}}/>
+    <FaLinkedin size={30} style={{color:"#fff",marginRight:"1rem"}} onClick={()=>{window.open("https://www.linkedin.com/in/jagdeesh-v-a4b1a4208/")}}/>    
+    <FaGithubSquare size={30} style={{color:"#fff",marginRight:"1rem"}} onClick={()=>{window.open("https://github.com/VJagdeesh")}}/>
+    <FaFacebook size={30} style={{color:"#fff",marginRight:"1rem"}} onClick={()=>{window.open("https://www.facebook.com/jagdeesh.venkat.9/")}}/>
+    <FaInstagram size={30} style={{color:"#fff",marginRight:"1rem"}} onClick={()=>{window.open("https://instagram.com/jagdeesh_v?utm_source=qr&igshid=MzNlNGNkZWQ4Mg==")}}/>
     </div>
     </div>    
     </div>    
