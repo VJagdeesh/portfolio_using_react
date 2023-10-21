@@ -7,7 +7,8 @@ const AboutContent = () => {
     <div className="about">
     <div className="left">
     <h1>Who Am I?</h1>
-    <p>A smart freakin engineer</p>
+    <p>Engineer at LTTS</p>
+    <p align="justify">Worked in the fields of Smart Meters, develped interactive dashboards using PERN Stack.  Currently working as Front-End engineer at LTTS.</p>
     <Link to="/contact"><button className="btn">Contact</button></Link>
     </div>
     <div className="right">
