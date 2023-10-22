@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom"
 import "./NavbarStyles.css"
 import {FaBars, FaTimes} from "react-icons/fa"
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import File from "../assets/JAGDEESH_V_Resume_21_10_23.pdf";
 
 const Navbar = () => {      
   const [click,setClick]=useState(false);
@@ -40,6 +41,9 @@ const Navbar = () => {
     </li>
     <li>
     <Link to="/certifications">Certifications</Link>    
+    </li>
+    <li>
+    <Link to={File} download="Resume" target="_blank" rel="noreferrer">Download Resume</Link>
     </li>
     </ul>
 
