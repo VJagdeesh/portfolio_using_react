@@ -3,6 +3,9 @@ import "./NavbarStyles.css"
 import {FaBars, FaTimes} from "react-icons/fa"
 import React, { useState } from 'react';
 import File from "../assets/JAGDEESH_V_Resume_21_10_23.pdf";
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Navbar = () => {      
   const [click,setClick]=useState(false);
@@ -19,6 +22,12 @@ const Navbar = () => {
   };
 
   window.addEventListener("scroll",changeColor);
+
+  // window.addEventListener("scroll", changeColor);
+
+  const handleDownloadClick = () => {
+    toast.success('Download Started');
+  };
 
   return (
     <div className={color ? "header header-bg" : "header"}>
@@ -43,7 +52,7 @@ const Navbar = () => {
     <Link to="/certifications">Certifications</Link>    
     </li>
     <li>
-    <Link to={File} download="Resume" target="_blank" rel="noreferrer">Download Resume</Link>
+    <Link to={File} download="Resume" target="_blank" rel="noreferrer" onClick={handleDownloadClick}>Download Resume</Link>
     </li>
     </ul>
 

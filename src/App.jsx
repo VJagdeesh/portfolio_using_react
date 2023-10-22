@@ -10,10 +10,12 @@ import Projects from './routes/Projects'
 import Contact from './routes/Contact'
 import Skills from './routes/Skills'
 import Certifications from './routes/Certifications'
+import { ToastContainer } from 'react-toastify'
 
 function App() {
 
   return (
+      <div>
       <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/about" element={<About/>}/>
@@ -22,6 +24,8 @@ function App() {
       <Route path="/skills" element={<Skills/>}/>
       <Route path="/certifications" element={<Certifications/>}/>
       </Routes>
+      <ToastContainer/>
+      </div>
   )
 }
 
